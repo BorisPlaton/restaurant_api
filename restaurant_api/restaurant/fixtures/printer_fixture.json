@@ -1,0 +1,920 @@
+[
+  {
+    "model": "restaurant.printer",
+    "pk": "012b6d4e0adf4d37b75598d1cff1bc1d",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "SDOA-197",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "0343b47b88354932851e5311ed121b49",
+    "fields": {
+      "check_type": "client",
+      "name": "GFDF-269",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "03bf469971a740e9975601cb156a1b8a",
+    "fields": {
+      "check_type": "client",
+      "name": "ZIOG-387",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "05e39794609b4078af15ed2eb5aaee0e",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "TBVU-286",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "075e364ae33d40c2a6f6ccd67f3cab99",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "OLQK-323",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "07b7418f3e864463bf4f1ad60b36385a",
+    "fields": {
+      "check_type": "client",
+      "name": "WRHG-106",
+      "point_id": 16
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "083db688a06a45dcace0904d984c2b60",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "XTNS-267",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "0888aa7eecd146b8ad50c7cb573b1b11",
+    "fields": {
+      "check_type": "client",
+      "name": "XLZZ-117",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "0b6fad2ccee74b039e40da7cc7986e89",
+    "fields": {
+      "check_type": "client",
+      "name": "VSBX-326",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "0c0ee6ed0c414e1a9e175ddce3828d39",
+    "fields": {
+      "check_type": "client",
+      "name": "LHJJ-271",
+      "point_id": 22
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "0d0ecc4fcbb649c7bb2b5a93b0f3984f",
+    "fields": {
+      "check_type": "client",
+      "name": "VVIT-327",
+      "point_id": 12
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "11260d77626f4fdd8779501938355549",
+    "fields": {
+      "check_type": "client",
+      "name": "NZTQ-266",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1336641f5cf54c07bd79783abadad065",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "WVYF-109",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "133e145b4c264f709f3bf84e5e45718c",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "GZGF-224",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "148a54cfe3a54de09e27ce076ea78701",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "OURW-211",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "177522ebeda34c548c9427c703a4ff88",
+    "fields": {
+      "check_type": "client",
+      "name": "MGTB-253",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "19bc0b64ab6e4613bf3dc6f4bf2c7c7c",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "OMGS-167",
+      "point_id": 9
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1a7c3b7dd65d4d8cba6903a38cb87f4d",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "ZVZW-227",
+      "point_id": 19
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1d14ac0a9d90486cb9784eec61c2f34e",
+    "fields": {
+      "check_type": "client",
+      "name": "UXWS-158",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1d949738a61a44e09995f424f9d7dc8e",
+    "fields": {
+      "check_type": "client",
+      "name": "DBGA-283",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1e3e9f4d8733445392b845c7c0ec8a40",
+    "fields": {
+      "check_type": "client",
+      "name": "AZBK-163",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1f33e3edf8a54aaf984ed1af773cb992",
+    "fields": {
+      "check_type": "client",
+      "name": "MFPZ-362",
+      "point_id": 17
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "1f8558f95da741c6a6f17212f83bae4e",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "RHRO-251",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "22af07efb2954dc191a6fe6e15419bdc",
+    "fields": {
+      "check_type": "client",
+      "name": "QUET-315",
+      "point_id": 16
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "251f4a1c6dfa469e9380772e92b146db",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "RUXW-110",
+      "point_id": 24
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "252155944b6a448a8fd0c4bcb15bd8e5",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "RFZN-144",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "2cff7d32a5924a4787201e02c97a2d87",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "TBXJ-266",
+      "point_id": 16
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "2e98f6a4e7354068a36013e930217cf4",
+    "fields": {
+      "check_type": "client",
+      "name": "WNSK-149",
+      "point_id": 7
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "311fd942cd944903aee4eaaee87be6a9",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "BCKQ-248",
+      "point_id": 19
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "325c02ed520d489a9c1a7c70011eb84b",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "SXXL-153",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "33534a8b5f134530ab7cf4aa327fe1d9",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "NEAZ-243",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "34094f31343042728afbce3153160193",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "PDDK-165",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "37fb38e501934f9b875e07ce49619441",
+    "fields": {
+      "check_type": "client",
+      "name": "OWYC-117",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "39bb714101f34425a98b6e2bc0803b08",
+    "fields": {
+      "check_type": "client",
+      "name": "LBEF-175",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "3da37027b9a8400c85ff21bace3cc8a5",
+    "fields": {
+      "check_type": "client",
+      "name": "RJTB-228",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "3ef9dde0cc3c4d68911cd9cf4e80f180",
+    "fields": {
+      "check_type": "client",
+      "name": "SDCT-355",
+      "point_id": 8
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "403cc40082f64223a7683d5f106ccd5c",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "PDUW-241",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "41406975b9934693b23ae194c541fb1d",
+    "fields": {
+      "check_type": "client",
+      "name": "LWLZ-120",
+      "point_id": 24
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "484cdcffdfdb42e285bc3f90b7fb07fb",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "HFNF-353",
+      "point_id": 16
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "4c366d3e9d4a4b49bf8edfde8ea98c51",
+    "fields": {
+      "check_type": "client",
+      "name": "CDTM-281",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "4c7faafd424440c8809c43487d607301",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "GJPK-322",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "52121176948e4bb3ac109ede9b5894b4",
+    "fields": {
+      "check_type": "client",
+      "name": "YUBF-363",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "5373994b67af42e6b50b056793bd5574",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "fastfood",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "53bbf00be5f14152bc42802a158d9f55",
+    "fields": {
+      "check_type": "client",
+      "name": "URIS-325",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "5953d39430d749b392b4f27e6f18da8b",
+    "fields": {
+      "check_type": "client",
+      "name": "ATNL-139",
+      "point_id": 6
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "5c9778e7a40e48708313c2c1b2350170",
+    "fields": {
+      "check_type": "client",
+      "name": "XBAX-142",
+      "point_id": 23
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "5da920074d0f4ed39085f51f4d8aa465",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "HPKP-197",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6180eaabe7dc4fb787bbfba6129d96c4",
+    "fields": {
+      "check_type": "client",
+      "name": "LOWR-144",
+      "point_id": 15
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6407e45a81d84b43948845175cda2883",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "ROTT-360",
+      "point_id": 12
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "65881604ef074547a0ca60779a3b8491",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "LVDO-193",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "67fe1680032f4e87b51ed2d7eeb26f3c",
+    "fields": {
+      "check_type": "client",
+      "name": "PCGN-200",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6848798ff18f4f538fb2ae89e6525587",
+    "fields": {
+      "check_type": "client",
+      "name": "ONVT-337",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6acf2e79bd5f48c2bf5989aa135b54b9",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "SBUD-105",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6d2bbf248f6243a4ab060beec4b15ba2",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "DXKH-188",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6e09f6965d5e477b827d105db1d8fd17",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "NWSI-326",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "6e0bca5d20654a8488ace3e92ec6ce64",
+    "fields": {
+      "check_type": "client",
+      "name": "ZSLQ-341",
+      "point_id": 8
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "715039741d79488b8a2b030d2672d56c",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "GCYL-242",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "723eff68562e46c7a37853c8dbd98be7",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "JTWV-157",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "7397a546f2b64234b2aa34713b7419b6",
+    "fields": {
+      "check_type": "client",
+      "name": "BMVV-228",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "74a7cc7a627a47b393641e00453ed76f",
+    "fields": {
+      "check_type": "client",
+      "name": "DEQS-251",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "76c7ceb0b1014389ae7cdf1ffe074c33",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "YRLB-121",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "7f94bd8661c4404d8d23f2f1bde0d1a1",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "ABGR-186",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "861d696937eb4b1c94eb8d47eb92377a",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "VSQK-282",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "892b8d439c014734a0fde6d46d6c46cb",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "SNLR-260",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "89a1501410674387957b58b51f1dd8eb",
+    "fields": {
+      "check_type": "client",
+      "name": "IWNW-350",
+      "point_id": 15
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "89fc873a92de43f1a3eb61068b66038b",
+    "fields": {
+      "check_type": "client",
+      "name": "BZUZ-137",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "95af305aa12f445d9de17f89f5ba871c",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "HKOU-300",
+      "point_id": 21
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "962853852360415d9b846361d52415e5",
+    "fields": {
+      "check_type": "client",
+      "name": "NJPW-139",
+      "point_id": 25
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "9839dd7445774889b4aec87b7c61e942",
+    "fields": {
+      "check_type": "client",
+      "name": "WHYB-369",
+      "point_id": 16
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "9859437ffd51414c952461880f1ea625",
+    "fields": {
+      "check_type": "client",
+      "name": "OCQW-129",
+      "point_id": 17
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "9b5b09c3f9ec4780a2c49c60f4e2dff5",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "RWJV-122",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "a066f57e9a4c447fa2cac8ea0c179c7f",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "KVNQ-267",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "a349346bc2e94366a13c34ef1bbed5d1",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "UZSO-241",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "a53a823e8c014672a551633cc0d14cf8",
+    "fields": {
+      "check_type": "client",
+      "name": "WSYC-355",
+      "point_id": 22
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "ac8602294fdb410cad67dfbca7f9585d",
+    "fields": {
+      "check_type": "client",
+      "name": "ZKRU-290",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "ae3138a708f14782958532e709fd9a0d",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "ZWTG-300",
+      "point_id": 25
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "b513ff7f0b8e480c8c9537ac8d11c4ea",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "OQAX-395",
+      "point_id": 22
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "b8bfc51ef4a44209902962dd4b5bfbc2",
+    "fields": {
+      "check_type": "client",
+      "name": "QVJZ-240",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "bbbee7d7a75a47a59ec500b9d96eb2d0",
+    "fields": {
+      "check_type": "client",
+      "name": "FGHI-285",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "bc2be930d83e4938b646f270a6bc6aed",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "GOUE-263",
+      "point_id": 23
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "bf3ef0f143e34059a4a687ea5690fdf2",
+    "fields": {
+      "check_type": "client",
+      "name": "PWOV-278",
+      "point_id": 16
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "c6262b4690cb46988d118e6b4569a9c5",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "OLAV-266",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "c88a251376c1440cb975c74c88a27c6a",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "EQRB-315",
+      "point_id": 13
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "cbaaf38e9b094899a6022cb1ece282a4",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "AVSL-325",
+      "point_id": 8
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "cd55c9c71ffd43e48790ec79c5177fbe",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "JQKH-177",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "cea9e045fc794cd68e943266ba33ace4",
+    "fields": {
+      "check_type": "client",
+      "name": "ZTNH-180",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "d35add38ec95498abb383415433130e9",
+    "fields": {
+      "check_type": "client",
+      "name": "EARJ-322",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "d8f67fdf5e8540b3b173f308e892d2b3",
+    "fields": {
+      "check_type": "client",
+      "name": "SZZN-115",
+      "point_id": 6
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "ddde48ea21a8475498e52c4167a11b63",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "IKJW-106",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "de3229f20d0747a2bde9e050cd098c75",
+    "fields": {
+      "check_type": "client",
+      "name": "PBRD-400",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "e2c29ee72b4c421aa5f545fd9b637bcc",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "PVYC-142",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "e55fc3652b3f479d92af14647abc0283",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "QJGM-366",
+      "point_id": 20
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "e8de3b5b18514aff877709fa2e818cff",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "YMYS-139",
+      "point_id": 20
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "eaacaa48dd964bbfb91044bd36825a24",
+    "fields": {
+      "check_type": "client",
+      "name": "ABVU-130",
+      "point_id": 7
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "efd7e62d3db6449386b554e8fabe624c",
+    "fields": {
+      "check_type": "client",
+      "name": "FHGL-181",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "f1dfa8dccd9f4aa9a4116d39f26d2ce2",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "EOQX-348",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "f2ee524b56ba4dcb8c3395ff1d7d1b05",
+    "fields": {
+      "check_type": "client",
+      "name": "ZWDH-274",
+      "point_id": 18
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "f6ffd296781c4a0ab6d5cde65bf8ee77",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "JVKA-397",
+      "point_id": 13
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "f99a09e8e6414947b72d749818b92e5c",
+    "fields": {
+      "check_type": "client",
+      "name": "ICQA-181",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "fa7bb2d2011445a983412aecb711eb4b",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "ARAW-369",
+      "point_id": 5
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "faba195be784496981a49697e60cdd89",
+    "fields": {
+      "check_type": "client",
+      "name": "DXUB-362",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "fe49691add8960ce78aba195b7449698",
+    "fields": {
+      "check_type": "client",
+      "name": "ZXUE-301",
+      "point_id": 6
+    }
+  }
+]
