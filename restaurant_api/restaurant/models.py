@@ -29,6 +29,11 @@ class Printer(models.Model):
         verbose_name = 'Принтер'
         verbose_name_plural = 'Принтеры'
 
+    def save(self, *args, **kwargs):
+        """Ensures validating all fields."""
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
     def __str__(self):
         return self.name
 
@@ -58,5 +63,10 @@ class Check(models.Model):
         verbose_name = 'Чек'
         verbose_name_plural = 'Чеки'
 
+    def save(self, *args, **kwargs):
+        """Ensures validating all fields."""
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
     def __str__(self):
-        return '{} {}'.format(self.pk, self.type)
+        return f'{self.pk} {self.type}'
