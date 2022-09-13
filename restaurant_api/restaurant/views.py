@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 
 from restaurant.mixins import RequestDataValidator
 from restaurant.serializers import Order
-from restaurant.services.create_order_checks import PointOrderChecks
+from restaurant.services.create_order_checks import CreateOrderChecks
 
 
 class CreateChecks(APIView, RequestDataValidator):
@@ -17,7 +17,7 @@ class CreateChecks(APIView, RequestDataValidator):
 
     def post(self, request: Request):
         client_order = self.get_request_data(request)
-        PointOrderChecks().create_checks_for_point(client_order)
+        CreateOrderChecks().create_checks_for_point(client_order)
         return Response({'ok': "Чеки успешно созданы"})
 
 

@@ -1,0 +1,74 @@
+[
+  {
+    "model": "restaurant.printer",
+    "pk": "012b6d4e0adf4d37b75598d1cff1bc1d",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "SDOA-197",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "0343b47b88354932851e5311ed121b49",
+    "fields": {
+      "check_type": "client",
+      "name": "GFDF-269",
+      "point_id": 1
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "03bf469971a740e9975601cb156a1b8a",
+    "fields": {
+      "check_type": "client",
+      "name": "ZIOG-387",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "05e39794609b4078af15ed2eb5aaee0e",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "TBVU-286",
+      "point_id": 2
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "075e364ae33d40c2a6f6ccd67f3cab99",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "OLQK-323",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "07b7418f3e864463bf4f1ad60b36385a",
+    "fields": {
+      "check_type": "client",
+      "name": "WRHG-106",
+      "point_id": 3
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "083db688a06a45dcace0904d984c2b60",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "XTNS-267",
+      "point_id": 4
+    }
+  },
+  {
+    "model": "restaurant.printer",
+    "pk": "083dce0904d984c2b60b688a06a45dca",
+    "fields": {
+      "check_type": "kitchen",
+      "name": "XTNS-237",
+      "point_id": 5
+    }
+  }
+]

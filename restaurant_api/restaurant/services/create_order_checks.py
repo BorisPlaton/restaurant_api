@@ -5,12 +5,12 @@ from restaurant.serializers import Order
 from restaurant.exceptions.exceptions import PointHasNoPrinters, CheckAlreadyCreated
 
 
-class PointOrderChecks:
+class CreateOrderChecks:
 
     def create_checks_for_point(self, client_order: Order.data):
         """
         Creates checks for the all printers placed in some point and
-        returns new records amount. Otherwise, if the order already
+        returns all new `Check` instances. Otherwise, if the order already
         exists, raises the exception.
         """
         self._check_order_is_new(client_order['id'])
@@ -34,6 +34,10 @@ class PointOrderChecks:
         """
         Returns `True` if order doesn't exist in the db.
         Otherwise, an error will be raised.
+
+        The order doesn't exist in the db if the db doesn't have
+        record whose `id` value of the `order` json-field is equal
+        to the `order_id` parameter.
         """
         order = Check.objects.filter(order__id=order_id)
         if order.exists():

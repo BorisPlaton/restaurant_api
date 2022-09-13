@@ -9,7 +9,7 @@ from config.settings import BASE_DIR
 from restaurant.models import Printer, Check
 
 
-class PrinterModel(TestCase):
+class TestPrinterModel(TestCase):
 
     @property
     def printer_model(self):
