@@ -10,8 +10,23 @@ CHECK_TYPE_CHOICES = [
 ]
 
 
-class Printer(models.Model):
-    """Принтер определенной точки сети ресторанов."""
+class BaseModel(models.Model):
+    """
+    The abstract model has basic, general functionality
+    that is reused in children classes.
+    """
+
+    class Meta:
+        abstract = True
+
+    def save(self, *args, **kwargs):
+        """Ensures validating all fields."""
+        self.full_clean()
+        return super().save(*args, **kwargs)
+
+
+class Printer(BaseModel):
+    """The specific point's printer."""
 
     api_key = models.CharField(
         "Ключ принтера", unique=True, primary_key=True, db_index=True,
@@ -29,17 +44,12 @@ class Printer(models.Model):
         verbose_name = 'Принтер'
         verbose_name_plural = 'Принтеры'
 
-    def save(self, *args, **kwargs):
-        """Ensures validating all fields."""
-        self.full_clean()
-        return super().save(*args, **kwargs)
-
     def __str__(self):
         return self.name
 
 
-class Check(models.Model):
-    """Чек с информацией о заказе."""
+class Check(BaseModel):
+    """Check with order information."""
 
     class CheckStatus(models.TextChoices):
         NEW = 'new'
@@ -62,11 +72,6 @@ class Check(models.Model):
     class Meta:
         verbose_name = 'Чек'
         verbose_name_plural = 'Чеки'
-
-    def save(self, *args, **kwargs):
-        """Ensures validating all fields."""
-        self.full_clean()
-        return super().save(*args, **kwargs)
 
     def __str__(self):
         return f'{self.pk} {self.type}'
