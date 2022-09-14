@@ -1,14 +1,15 @@
-from rest_framework.request import Request
-
-
-class RequestDataValidator:
+class DataValidatorMixin:
+    """
+    Validates the incoming data via `serializer` which must
+    be a type `rest_framework.serializers.Serializer`.
+    """
     serializer = None
 
-    def get_request_data(self, request: Request):
+    def validate_request_data(self, request_data: dict):
         """
-        Tries to deserialize the request data and returns it. Otherwise,
-        rises exception.
+        Validates the data via `serializer` and returns the initialized
+        `serializer` with it. Otherwise, rises exception.
         """
-        client_order = self.serializer(data=request.data)
+        client_order = self.serializer(data=request_data)
         client_order.is_valid(raise_exception=True)
-        return client_order.data
+        return client_order

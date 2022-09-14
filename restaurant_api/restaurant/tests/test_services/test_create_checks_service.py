@@ -62,4 +62,4 @@ class TestCreateOrderChecksService(TestCase):
             },
             "point_id": 1
         }
-        self.assertEqual(len(self.check_service.create_checks_for_point(client_data)), 2)
+        self.assertEqual(len(self.check_service.execute(client_data)), 2)

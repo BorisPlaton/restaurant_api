@@ -1,13 +1,17 @@
 from django.db.models import QuerySet
 
 from restaurant.models import Printer, Check
-from restaurant.serializers import Order
 from restaurant.exceptions.exceptions import PointHasNoPrinters, CheckAlreadyCreated
+from restaurant.services.schemas import OrderData
 
 
 class CreateOrderChecks:
+    """
+    Creates checks records in the database from user's order
+    information.
+    """
 
-    def create_checks_for_point(self, client_order: Order.data):
+    def execute(self, client_order: OrderData):
         """
         Creates checks for the all printers placed in some point and
         returns all new `Check` instances. Otherwise, if the order already
@@ -15,19 +19,7 @@ class CreateOrderChecks:
         """
         self._check_order_is_new(client_order['id'])
         point_printers = self._get_all_printers_at_point(client_order['point_id'])
-        new_checks_amount = self._create_new_checks_for_printers(client_order, point_printers)
-        return new_checks_amount
-
-    @staticmethod
-    def _get_all_printers_at_point(point_id: int) -> QuerySet[Printer]:
-        """
-        Returns all printers placed at the point. Otherwise, raises
-        the exception.
-        """
-        printers = Printer.objects.filter(point_id=point_id)
-        if not printers.exists():
-            raise PointHasNoPrinters
-        return Printer.objects.filter(point_id=point_id)
+        return self._create_new_checks_for_printers(client_order, point_printers)
 
     @staticmethod
     def _check_order_is_new(order_id: int) -> bool:
@@ -45,9 +37,20 @@ class CreateOrderChecks:
         return True
 
     @staticmethod
+    def _get_all_printers_at_point(point_id: int) -> QuerySet[Printer]:
+        """
+        Returns all printers placed at the point. Otherwise, raises
+        the exception.
+        """
+        printers = Printer.objects.filter(point_id=point_id)
+        if not printers.exists():
+            raise PointHasNoPrinters
+        return Printer.objects.filter(point_id=point_id)
+
+    @staticmethod
     def _create_new_checks_for_printers(
-            client_order: Order, point_printers: QuerySet[Printer]
-    ) -> int:
+            client_order: OrderData, point_printers: QuerySet[Printer]
+    ) -> QuerySet[Check]:
         """
         Creates new checks for printers and returns amount of the new
         records.

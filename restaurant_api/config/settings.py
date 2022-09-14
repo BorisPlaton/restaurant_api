@@ -18,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'rest_framework',
+    'django_rq',
 
     'restaurant',
 ]
@@ -92,7 +93,13 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
 REST_FRAMEWORK = {
     'EXCEPTION_HANDLER': 'restaurant.exceptions.handler.error_exception_handler'
+}
+
+RQ_QUEUES = {
+    'wkhtmltopdf': {
+        'HOST': os.getenv('RQ_REDIS_HOST'),
+        'PORT': os.getenv('RQ_REDIS_PORT'),
+    }
 }
