@@ -1,7 +1,7 @@
 import shutil
 
-from django.core.exceptions import ValidationError
 from django.core.files.base import ContentFile
+from django.db import IntegrityError, transaction
 from django.db.models import Count
 from django.test import TestCase
 
@@ -54,19 +54,21 @@ class TestPrinterModel(TestCase):
         self.assertEqual(unique_printers['unique_printer_amounts'], printers_amount - 1)
 
     def test_printer_accepts_only_two_types_of_check_type(self):
-        with self.assertRaises(ValidationError):
-            wrong_printer = self.printer_model(
-                check_type='wrong value',
-                name='Printer name',
-                point_id=2,
-            )
-            wrong_printer.save()
-        with self.assertRaises(ValidationError):
-            self.printer_model.objects.create(
-                check_type='wrong value',
-                name='Printer name',
-                point_id=2,
-            )
+        with transaction.atomic():
+            with self.assertRaises(IntegrityError):
+                wrong_printer = self.printer_model(
+                    check_type='wrong value',
+                    name='Printer name',
+                    point_id=2,
+                )
+                wrong_printer.save()
+        with transaction.atomic():
+            with self.assertRaises(IntegrityError):
+                self.printer_model.objects.create(
+                    check_type='wrong value',
+                    name='Printer name',
+                    point_id=2,
+                )
         kitchen_type = self.printer_model.objects.create(
             check_type='kitchen',
             name='Printer name',
@@ -105,21 +107,23 @@ class CheckModel(TestCase):
 
     def test_check_accepts_only_two_types_of_check_type(self):
         printer = self.get_printer_model()
-        with self.assertRaises(ValidationError):
-            check = self.check_model(
-                order={'field': 'value'},
-                type='wrong type',
-                status='new',
-                printer_id=printer
-            )
-            check.save()
-        with self.assertRaises(ValidationError):
-            self.check_model.objects.create(
-                order={'field': 'value'},
-                type='wrong type',
-                status='new',
-                printer_id=printer
-            )
+        with transaction.atomic():
+            with self.assertRaises(IntegrityError):
+                check = self.check_model(
+                    order={'field': 'value'},
+                    type='wrong type',
+                    status='new',
+                    printer_id=printer
+                )
+                check.save()
+        with transaction.atomic():
+            with self.assertRaises(IntegrityError):
+                self.check_model.objects.create(
+                    order={'field': 'value'},
+                    type='wrong type',
+                    status='new',
+                    printer_id=printer
+                )
         kitchen_type = self.check_model.objects.create(
             order={'field': 'value'},
             type='kitchen',
@@ -135,24 +139,26 @@ class CheckModel(TestCase):
         self.assertTrue(kitchen_type)
         self.assertTrue(client_type)
 
-    def test_printer_accepts_only_two_types_of_check_type(self):
+    def test_check_accepts_only_three_status_type(self):
         printer = self.get_printer_model()
         for i in range(3):
-            with self.assertRaises(ValidationError):
-                wrong_printer = self.check_model(
-                    order={'field': 'value'},
-                    type='kitchen',
-                    status=str(i),
-                    printer_id=printer
-                )
-                wrong_printer.save()
-            with self.assertRaises(ValidationError):
-                self.check_model.objects.create(
-                    order={'field': 'value'},
-                    type='client',
-                    status=str(i),
-                    printer_id=printer
-                )
+            with transaction.atomic():
+                with self.assertRaises(IntegrityError):
+                    wrong_printer = self.check_model(
+                        order={'field': 'value'},
+                        type='kitchen',
+                        status=str(i),
+                        printer_id=printer
+                    )
+                    wrong_printer.save()
+            with transaction.atomic():
+                with self.assertRaises(IntegrityError):
+                    self.check_model.objects.create(
+                        order={'field': 'value'},
+                        type='client',
+                        status=str(i),
+                        printer_id=printer
+                    )
         new_check = self.check_model.objects.create(
             order={'field': 'value'},
             type='kitchen',
