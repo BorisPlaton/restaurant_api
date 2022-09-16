@@ -4,7 +4,7 @@ from rest_framework.views import APIView
 
 from restaurant.mixins import DataValidatorMixin
 from restaurant.serializers import Order
-from restaurant.services.commands import create_new_order_and_generate_checks
+from restaurant.services.service_commands import create_new_order_and_generate_checks
 
 
 class CreateChecks(APIView, DataValidatorMixin):

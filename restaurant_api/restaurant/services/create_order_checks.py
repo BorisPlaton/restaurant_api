@@ -7,7 +7,7 @@ from restaurant.services.schemas import OrderData
 
 class CreateOrderChecks:
     """
-    Creates checks records in the database from user's order
+    The command creates checks records in the database from user's order
     information.
     """
 
