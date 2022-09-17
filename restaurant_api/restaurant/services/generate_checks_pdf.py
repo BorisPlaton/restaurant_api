@@ -1,21 +1,21 @@
 import base64
 import json
 import os
-from pathlib import Path
 
 import django_rq
 import requests
-from django.conf import settings
 from django.core.files.base import ContentFile
 from django.template.loader import render_to_string
-from django import template
 from rq import Queue
 
 from restaurant.models import Check, CheckStatus
 
 
 class GenerateChecksPdf:
-    """Generates PDF files for `Check` instance in the background."""
+    """
+    Generates PDF files for the `Check` instances in the background. In the
+    end marks the instances as `rendered`.
+    """
 
     def execute(self, checks_ids: list[int]):
         """Execute pdf generation command for checks."""
@@ -32,7 +32,8 @@ class GenerateChecksPdf:
     @classmethod
     def _create_pdf_for_check(cls, check_id: int):
         """
-        Creates pdf for the `Check` instance which `id` field matches the `check_id` value.
+        Creates a pdf file for the `Check` instance which `id` field matches
+        the `check_id` value.
         """
         check_pdf = cls._generate_check_pdf(check_id)
         cls._set_pdf_file_to_check_instance(check_id, check_pdf)
@@ -62,7 +63,7 @@ class GenerateChecksPdf:
     @staticmethod
     def _get_check_html(check_id: int) -> str:
         """
-        Renders the corresponding(kitchen or client) html file with the order data
+        Renders a corresponding(kitchen or client) html file with the order data
         and returns it.
         """
         client_order = Check.objects.values('order', 'type').get(pk=check_id)

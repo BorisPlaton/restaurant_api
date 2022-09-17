@@ -1,12 +1,10 @@
-import shutil
-
 from django.core.files.base import ContentFile
 from django.db import IntegrityError, transaction
 from django.db.models import Count
 from django.test import TestCase
 
-from config.settings import BASE_DIR
 from restaurant.models import Printer, Check
+from restaurant.tests.utils import rewrite_media_dir
 
 
 class TestPrinterModel(TestCase):
@@ -193,6 +191,7 @@ class CheckModel(TestCase):
             f'{check_model.pk} {check_model.type}'
         )
 
+    @rewrite_media_dir
     def test_saving_pdf_file(self):
         check_model: Check = self.check_model.objects.create(
             order={'field': 'value'},
@@ -200,17 +199,12 @@ class CheckModel(TestCase):
             status='printed',
             printer_id=self.get_printer_model()
         )
-        new_media_root = BASE_DIR / 'test_media'
-        try:
-            with self.settings(MEDIA_ROOT=new_media_root):
-                check_model.pdf_file.save(
-                    'file_name.pdf',
-                    ContentFile('some pdf stuff..')
-                )
-                check_model.save()
-                self.assertTrue(
-                    f'/pdf/{check_model.pk}_{check_model.type}.pdf' in
-                    check_model.pdf_file.url
-                )
-        finally:
-            shutil.rmtree(new_media_root)
+        check_model.pdf_file.save(
+            'file_name.pdf',
+            ContentFile('some pdf stuff..')
+        )
+        check_model.save()
+        self.assertTrue(
+            f'/pdf/{check_model.pk}_{check_model.type}.pdf' in
+            check_model.pdf_file.url
+        )
