@@ -1,0 +1,23 @@
+<table class="table" width="830px">
+  <thead>
+  <tr>
+    <th>Название</th>
+    <th>Количество</th>
+    <th>Цена за единицу</th>
+  </tr>
+  </thead>
+  <tbody>
+  {% for item in items %}
+  <tr>
+    <td>{{ item.name }}</td>
+    <td>{{ item.quantity }}</td>
+    <td>{{ item.unit_price }}</td>
+  </tr>
+  {% endfor %}
+  <tr>
+    <td></td>
+    <td>ИТОГО:</td>
+    <td>{{ price }}</td>
+  </tr>
+  </tbody>
+</table>

@@ -50,7 +50,7 @@ class CreateOrderChecks:
     @staticmethod
     def _create_new_checks_for_printers(
             client_order: OrderData, point_printers: QuerySet[Printer]
-    ) -> QuerySet[Check]:
+    ) -> list[Check]:
         """
         Creates new checks for printers and returns amount of the new
         records.

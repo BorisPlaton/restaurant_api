@@ -9,6 +9,6 @@ def create_new_order_and_generate_checks(client_order: Order) -> list[int]:
     generation for them. Returns a list with models' `id` field.
     """
     new_checks = CreateOrderChecks().execute(client_order.data)
-    checks_ids = new_checks.values_list('id', flat=True)
+    checks_ids = [check.pk for check in new_checks]
     GenerateChecksPdf().execute(checks_ids)
     return checks_ids
