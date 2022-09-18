@@ -2,10 +2,11 @@ from django.db.models import QuerySet
 
 from restaurant.models import Printer, Check
 from restaurant.exceptions.exceptions import PointHasNoPrinters, CheckAlreadyCreated
-from restaurant.services.schemas import OrderData
+from restaurant.services.commands.abstract import BaseCommand
+from restaurant.services.commands.schemas import OrderData
 
 
-class CreateOrderChecks:
+class CreateOrderChecks(BaseCommand):
     """
     The command creates checks records in the database from user's order
     information.

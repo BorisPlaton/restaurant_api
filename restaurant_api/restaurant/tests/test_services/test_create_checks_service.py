@@ -2,7 +2,7 @@ from django.test import TestCase
 
 from restaurant.exceptions.exceptions import PointHasNoPrinters, CheckAlreadyCreated
 from restaurant.models import Printer, Check
-from restaurant.services.create_order_checks import CreateOrderChecks
+from restaurant.services.commands.create_order_checks import CreateOrderChecks
 
 
 class TestCreateOrderChecksService(TestCase):

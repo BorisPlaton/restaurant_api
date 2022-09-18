@@ -4,7 +4,7 @@ from unittest.mock import MagicMock
 from django.test import TestCase
 from rq import Queue
 
-from restaurant.services.enqueue_checks_generation import EnqueueChecksGeneration
+from restaurant.services.commands.enqueue_checks_generation import EnqueueChecksGeneration
 
 
 class TestEnqueueChecksGenerationService(TestCase):
@@ -17,8 +17,8 @@ class TestEnqueueChecksGenerationService(TestCase):
         self.assertEqual(self.service.queue.name, 'wkhtmltopdf')
         self.assertTrue(isinstance(self.service.queue, Queue))
 
-    @mock.patch('restaurant.services.enqueue_checks_generation.Queue')
-    @mock.patch('restaurant.services.enqueue_checks_generation.django_rq')
+    @mock.patch('restaurant.services.commands.enqueue_checks_generation.Queue')
+    @mock.patch('restaurant.services.commands.enqueue_checks_generation.django_rq')
     def test_enqueue_pdf_generation_creates_jobs_for_every_check_instance(
             self, rq_mock, queue_mock
     ):
@@ -34,8 +34,8 @@ class TestEnqueueChecksGenerationService(TestCase):
         self.service._enqueue_checks_ids_for_generating_pdf(check_ids)
         self.assertEqual(len(check_jobs), len(check_ids))
 
-    @mock.patch('restaurant.services.enqueue_checks_generation.Queue')
-    @mock.patch('restaurant.services.enqueue_checks_generation.django_rq')
+    @mock.patch('restaurant.services.commands.enqueue_checks_generation.Queue')
+    @mock.patch('restaurant.services.commands.enqueue_checks_generation.django_rq')
     def test_enqueue_pdf_generation_creates_jobs_without_id_duplication(
             self, rq_mock, queue_mock
     ):

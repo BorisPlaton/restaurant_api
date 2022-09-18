@@ -1,10 +1,11 @@
 import django_rq
 from rq import Queue
 
-from restaurant.services.generate_checks_pdf import GenerateChecksPDF
+from restaurant.services.commands.abstract import BaseCommand
+from restaurant.services.commands.generate_checks_pdf import GenerateChecksPDF
 
 
-class EnqueueChecksGeneration:
+class EnqueueChecksGeneration(BaseCommand):
     """
     Enqueues PDF-files generation for `Check` instances in the background.
     """

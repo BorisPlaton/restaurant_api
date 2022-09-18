@@ -7,9 +7,10 @@ from django.core.files.base import ContentFile
 from django.template.loader import render_to_string
 
 from restaurant.models import Check, CheckStatus
+from restaurant.services.commands.abstract import BaseCommand
 
 
-class GenerateChecksPDF:
+class GenerateChecksPDF(BaseCommand):
     """
     Generates PDF-files for `Check` instances. In the end marks the
     instances as `rendered`.

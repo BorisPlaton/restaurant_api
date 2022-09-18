@@ -1,6 +1,6 @@
 from restaurant.serializers import Order
-from restaurant.services.create_order_checks import CreateOrderChecks
-from restaurant.services.enqueue_checks_generation import EnqueueChecksGeneration
+from restaurant.services.commands.create_order_checks import CreateOrderChecks
+from restaurant.services.commands.enqueue_checks_generation import EnqueueChecksGeneration
 
 
 def create_new_order_and_generate_checks(client_order: Order) -> list[int]:

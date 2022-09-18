@@ -4,7 +4,7 @@ from unittest.mock import MagicMock
 from django.test import TestCase
 
 from restaurant.models import Check, CheckStatus
-from restaurant.services.generate_checks_pdf import GenerateChecksPDF
+from restaurant.services.commands.generate_checks_pdf import GenerateChecksPDF
 from restaurant.tests.utils import rewrite_media_dir
 
 
@@ -46,7 +46,7 @@ class TestPDFChecksGenerationService(TestCase):
         with check.pdf_file.open('r') as pdf_file:
             self.assertEqual(pdf_file.read(), pdf_file_content.decode())
 
-    @mock.patch('restaurant.services.generate_checks_pdf.requests')
+    @mock.patch('restaurant.services.commands.generate_checks_pdf.requests')
     def test_convert_to_pdf_returns_bytes(self, requests_mock: MagicMock):
         response_mock = MagicMock(content=b'pdf file')
         requests_mock.post.return_value = response_mock

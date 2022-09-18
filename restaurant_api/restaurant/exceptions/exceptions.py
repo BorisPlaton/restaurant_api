@@ -15,3 +15,8 @@ class CheckAlreadyCreated(APIException):
 class PointHasNoPrinters(APIException):
     status_code = status.HTTP_400_BAD_REQUEST
     default_detail = "Для данной точки не настроено ни одного принтера."
+
+
+class QueryParameterNotSpecified(APIException):
+    status_code = status.HTTP_400_BAD_REQUEST
+    default_detail = "Вы не указали параметр."
