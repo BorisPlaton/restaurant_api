@@ -1,6 +1,6 @@
 class DataValidatorMixin:
     """
-    Validates the incoming data via `serializer` which must
+    Validates incoming data via `serializer` which must
     be a type `rest_framework.serializers.Serializer`.
     """
     serializer = None

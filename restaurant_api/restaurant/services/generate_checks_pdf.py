@@ -2,59 +2,45 @@ import base64
 import json
 import os
 
-import django_rq
 import requests
 from django.core.files.base import ContentFile
 from django.template.loader import render_to_string
-from rq import Queue
 
 from restaurant.models import Check, CheckStatus
 
 
-class GenerateChecksPdf:
+class GenerateChecksPDF:
     """
-    Generates PDF files for the `Check` instances in the background. In the
-    end marks the instances as `rendered`.
+    Generates PDF-files for `Check` instances. In the end marks the
+    instances as `rendered`.
     """
-
-    def execute(self, checks_ids: list[int]):
-        """Execute pdf generation command for checks."""
-        self._enqueue_checks_ids_for_generating_pdf(checks_ids)
-
-    def _enqueue_checks_ids_for_generating_pdf(self, checks_ids: list[int]):
-        """Enqueue new jobs for workers."""
-        jobs_to_enqueue = [
-            Queue.prepare_data(self._create_pdf_for_check, args=[check_id])
-            for check_id in checks_ids
-        ]
-        self.queue.enqueue_many(jobs_to_enqueue)
 
     @classmethod
-    def _create_pdf_for_check(cls, check_id: int):
+    def execute(cls, check_id: int):
         """
-        Creates a pdf file for the `Check` instance which `id` field matches
+        Creates a PDF-file for the `Check` instance which `id` field matches
         the `check_id` value.
         """
         check_pdf = cls._generate_check_pdf(check_id)
         cls._set_pdf_file_to_check_instance(check_id, check_pdf)
-        cls._mark_check_is_rendered(check_id)
+        return cls._mark_check_as_rendered(check_id)
 
     @classmethod
-    def _generate_check_pdf(cls, check_id: int) -> bytes:
-        """Generates a pdf file for the `Check` model and returns it."""
+    def _generate_check_pdf(cls, check_id: int):
+        """Generates a PDF-file for `Check` model and returns it."""
         html_file_to_render = cls._get_check_html(check_id)
         return cls._convert_html_to_pdf(html_file_to_render)
 
     @staticmethod
     def _set_pdf_file_to_check_instance(check_id: int, pdf_file: bytes):
-        """Sets the given pdf file to the `Check` instance. """
+        """Sets the given PDF-file to the `Check` instance. """
         Check.objects.get(pk=check_id).pdf_file.save(
-            'check pdf file',
+            'PDF-file',
             ContentFile(pdf_file)
         )
 
     @staticmethod
-    def _mark_check_is_rendered(check_id: int):
+    def _mark_check_as_rendered(check_id: int):
         """
         Marks the check which `id` field matches the `check_id` value as rendered.
         """
@@ -63,7 +49,7 @@ class GenerateChecksPdf:
     @staticmethod
     def _get_check_html(check_id: int) -> str:
         """
-        Renders a corresponding(kitchen or client) html file with the order data
+        Renders the corresponding(kitchen or client) HTML-file with order data
         and returns it.
         """
         client_order = Check.objects.values('order', 'type').get(pk=check_id)
@@ -72,8 +58,8 @@ class GenerateChecksPdf:
     @staticmethod
     def _convert_html_to_pdf(html_file: str) -> bytes:
         """
-        Converts the html file to pdf using the `wkhtmltopdf` docker image.
-        Returns a result.
+        Converts the HTML-file to PDF using the `wkhtmltopdf` docker image.
+        Returns the result as bytes.
         """
         url = f"http://localhost:{os.getenv('TO_PDF_PORT')}/"
         data = {
@@ -88,7 +74,3 @@ class GenerateChecksPdf:
             headers=headers
         )
         return response.content
-
-    def __init__(self):
-        """Gets a queue which stores all the jobs to be done."""
-        self.queue = django_rq.get_queue('wkhtmltopdf')

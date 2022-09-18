@@ -1,6 +1,6 @@
 from restaurant.serializers import Order
 from restaurant.services.create_order_checks import CreateOrderChecks
-from restaurant.services.generate_checks_pdf import GenerateChecksPdf
+from restaurant.services.enqueue_checks_generation import EnqueueChecksGeneration
 
 
 def create_new_order_and_generate_checks(client_order: Order) -> list[int]:
@@ -10,5 +10,5 @@ def create_new_order_and_generate_checks(client_order: Order) -> list[int]:
     """
     new_checks = CreateOrderChecks().execute(client_order.data)
     checks_ids = [check.pk for check in new_checks]
-    GenerateChecksPdf().execute(checks_ids)
+    EnqueueChecksGeneration().execute(checks_ids)
     return checks_ids
