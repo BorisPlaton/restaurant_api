@@ -5,7 +5,7 @@ from restaurant.models import Printer, Check
 
 @admin.register(Printer)
 class PrinterAdmin(admin.ModelAdmin):
-    list_display = ['api_key', 'name', 'check_type', 'point_id']
+    list_display = ['api_key', 'name', 'check_type']
     readonly_fields = ['api_key']
     list_display_links = ['name', 'api_key']
     list_filter = ['check_type']
@@ -13,5 +13,5 @@ class PrinterAdmin(admin.ModelAdmin):
 
 @admin.register(Check)
 class CheckAdmin(admin.ModelAdmin):
-    list_display = ['type', 'status', 'printer_id']
-    list_filter = ['printer_id', 'type', 'status']
+    list_display = ['id', 'type', 'status', 'printer_id']
+    list_filter = ['type', 'status', 'printer_id']

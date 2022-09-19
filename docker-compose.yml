@@ -3,9 +3,26 @@ version: "3.8"
 services:
   redis:
     image: redis
+    container_name: restaurant_redis_container
     ports:
-      - "6300:6379"
+      - "${RQ_REDIS_PORT}:6379"
   wkhtmltopdf:
     image: openlabs/docker-wkhtmltopdf-aas
+    container_name: restaurant_wkhtmltopdf_container
     ports:
-      - "6400:80"
+      - "${TO_PDF_PORT}:80"
+  db:
+    image: postgres
+    container_name: restaurant_db_container
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: $DB_USER_PASSWORD
+      POSTGRES_USER: $DB_USER
+      POSTGRES_DB: $DB_NAME
+      POSTGRES_INITDB_ARGS: "-A md5"
+    ports:
+      - "${DB_PORT}:5432"
+    volumes:
+      - restaurant_pgdata:/var/lib/postgresql/data
+volumes:
+  restaurant_pgdata:
